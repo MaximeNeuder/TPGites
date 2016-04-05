@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="gitesModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="gitesEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="clients" EntityType="gitesModel.client" />
+    <EntitySet Name="contrats" EntityType="gitesModel.contrat" />
+    <EntitySet Name="gites" EntityType="gitesModel.gite" />
+    <EntitySet Name="periodes" EntityType="gitesModel.periode" />
+    <EntitySet Name="plannings" EntityType="gitesModel.planning" />
+    <EntitySet Name="semaines" EntityType="gitesModel.semaine" />
+    <EntitySet Name="tarifs" EntityType="gitesModel.tarif" />
+    <AssociationSet Name="fk_contrat_numClient" Association="gitesModel.fk_contrat_numClient">
+      <End Role="client" EntitySet="clients" />
+      <End Role="contrat" EntitySet="contrats" />
+    </AssociationSet>
+    <AssociationSet Name="fk_planning_numContrat" Association="gitesModel.fk_planning_numContrat">
+      <End Role="contrat" EntitySet="contrats" />
+      <End Role="planning" EntitySet="plannings" />
+    </AssociationSet>
+    <AssociationSet Name="fk_planning_numGite" Association="gitesModel.fk_planning_numGite">
+      <End Role="gite" EntitySet="gites" />
+      <End Role="planning" EntitySet="plannings" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tarif_numGite" Association="gitesModel.fk_tarif_numGite">
+      <End Role="gite" EntitySet="gites" />
+      <End Role="tarif" EntitySet="tarifs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_semaine_numPeriode" Association="gitesModel.fk_semaine_numPeriode">
+      <End Role="periode" EntitySet="periodes" />
+      <End Role="semaine" EntitySet="semaines" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tarif_numPeriode" Association="gitesModel.fk_tarif_numPeriode">
+      <End Role="periode" EntitySet="periodes" />
+      <End Role="tarif" EntitySet="tarifs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_planning_numSemaine" Association="gitesModel.fk_planning_numSemaine">
+      <End Role="semaine" EntitySet="semaines" />
+      <End Role="planning" EntitySet="plannings" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="client">
+    <Key>
+      <PropertyRef Name="numClient" />
+    </Key>
+    <Property Name="numClient" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="nomClient" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="adresseClient" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="cpClient" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="villeClient" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="lesContrats" Relationship="gitesModel.fk_contrat_numClient" FromRole="client" ToRole="contrat" />
+  </EntityType>
+  <EntityType Name="contrat">
+    <Key>
+      <PropertyRef Name="numContrat" />
+    </Key>
+    <Property Name="numContrat" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="dateContrat" Type="DateTime" />
+    <Property Name="valide" Type="Int32" />
+    <Property Name="annule" Type="Int32" />
+    <Property Name="numClient" Type="Int32" />
+    <NavigationProperty Name="leClient" Relationship="gitesModel.fk_contrat_numClient" FromRole="contrat" ToRole="client" />
+    <NavigationProperty Name="lesGitesReserves" Relationship="gitesModel.fk_planning_numContrat" FromRole="contrat" ToRole="planning" />
+  </EntityType>
+  <EntityType Name="gite">
+    <Key>
+      <PropertyRef Name="numGite" />
+    </Key>
+    <Property Name="numGite" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="nomGite" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="adresseGite" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="cpGite" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="villeGite" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="nbEpis" Type="Int16" />
+    <Property Name="descriptionGite" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="lesPlannings" Relationship="gitesModel.fk_planning_numGite" FromRole="gite" ToRole="planning" />
+    <NavigationProperty Name="lesTarifs" Relationship="gitesModel.fk_tarif_numGite" FromRole="gite" ToRole="tarif" />
+  </EntityType>
+  <EntityType Name="periode">
+    <Key>
+      <PropertyRef Name="numPeriode" />
+    </Key>
+    <Property Name="numPeriode" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="dateDebutPeriode" Type="DateTime" />
+    <Property Name="dateFinPeriode" Type="DateTime" />
+    <NavigationProperty Name="lesSemaines" Relationship="gitesModel.fk_semaine_numPeriode" FromRole="periode" ToRole="semaine" />
+    <NavigationProperty Name="lesTarifs" Relationship="gitesModel.fk_tarif_numPeriode" FromRole="periode" ToRole="tarif" />
+  </EntityType>
+  <EntityType Name="planning">
+    <Key>
+      <PropertyRef Name="numSemaine" />
+      <PropertyRef Name="numGite" />
+    </Key>
+    <Property Name="numSemaine" Type="Int32" Nullable="false" />
+    <Property Name="numGite" Type="Int32" Nullable="false" />
+    <Property Name="numContrat" Type="Int32" />
+    <NavigationProperty Name="leContrat" Relationship="gitesModel.fk_planning_numContrat" FromRole="planning" ToRole="contrat" />
+    <NavigationProperty Name="leGite" Relationship="gitesModel.fk_planning_numGite" FromRole="planning" ToRole="gite" />
+    <NavigationProperty Name="laSemaine" Relationship="gitesModel.fk_planning_numSemaine" FromRole="planning" ToRole="semaine" />
+  </EntityType>
+  <EntityType Name="semaine">
+    <Key>
+      <PropertyRef Name="numsemaine" />
+    </Key>
+    <Property Name="numsemaine" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="dateDebutSemaine" Type="DateTime" Nullable="false" />
+    <Property Name="dateFinSemaine" Type="DateTime" />
+    <Property Name="numPeriode" Type="Int32" />
+    <NavigationProperty Name="laPeriode" Relationship="gitesModel.fk_semaine_numPeriode" FromRole="semaine" ToRole="periode" />
+    <NavigationProperty Name="lesPlannings" Relationship="gitesModel.fk_planning_numSemaine" FromRole="semaine" ToRole="planning" />
+  </EntityType>
+  <EntityType Name="tarif">
+    <Key>
+      <PropertyRef Name="numGite" />
+      <PropertyRef Name="numPeriode" />
+    </Key>
+    <Property Name="numGite" Type="Int32" Nullable="false" />
+    <Property Name="numPeriode" Type="Int32" Nullable="false" />
+    <Property Name="prixSemaine" Type="Decimal" />
+    <NavigationProperty Name="leGite" Relationship="gitesModel.fk_tarif_numGite" FromRole="tarif" ToRole="gite" />
+    <NavigationProperty Name="laPeriode" Relationship="gitesModel.fk_tarif_numPeriode" FromRole="tarif" ToRole="periode" />
+  </EntityType>
+  <Association Name="fk_contrat_numClient">
+    <End Role="client" Type="gitesModel.client" Multiplicity="0..1" />
+    <End Role="contrat" Type="gitesModel.contrat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="numClient" />
+      </Principal>
+      <Dependent Role="contrat">
+        <PropertyRef Name="numClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_planning_numContrat">
+    <End Role="contrat" Type="gitesModel.contrat" Multiplicity="0..1" />
+    <End Role="planning" Type="gitesModel.planning" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contrat">
+        <PropertyRef Name="numContrat" />
+      </Principal>
+      <Dependent Role="planning">
+        <PropertyRef Name="numContrat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_planning_numGite">
+    <End Role="gite" Type="gitesModel.gite" Multiplicity="1" />
+    <End Role="planning" Type="gitesModel.planning" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="gite">
+        <PropertyRef Name="numGite" />
+      </Principal>
+      <Dependent Role="planning">
+        <PropertyRef Name="numGite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tarif_numGite">
+    <End Role="gite" Type="gitesModel.gite" Multiplicity="1" />
+    <End Role="tarif" Type="gitesModel.tarif" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="gite">
+        <PropertyRef Name="numGite" />
+      </Principal>
+      <Dependent Role="tarif">
+        <PropertyRef Name="numGite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_semaine_numPeriode">
+    <End Role="periode" Type="gitesModel.periode" Multiplicity="0..1" />
+    <End Role="semaine" Type="gitesModel.semaine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="periode">
+        <PropertyRef Name="numPeriode" />
+      </Principal>
+      <Dependent Role="semaine">
+        <PropertyRef Name="numPeriode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tarif_numPeriode">
+    <End Role="periode" Type="gitesModel.periode" Multiplicity="1" />
+    <End Role="tarif" Type="gitesModel.tarif" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="periode">
+        <PropertyRef Name="numPeriode" />
+      </Principal>
+      <Dependent Role="tarif">
+        <PropertyRef Name="numPeriode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_planning_numSemaine">
+    <End Role="semaine" Type="gitesModel.semaine" Multiplicity="1" />
+    <End Role="planning" Type="gitesModel.planning" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="semaine">
+        <PropertyRef Name="numsemaine" />
+      </Principal>
+      <Dependent Role="planning">
+        <PropertyRef Name="numSemaine" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

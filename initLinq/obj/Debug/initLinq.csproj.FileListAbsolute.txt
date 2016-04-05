@@ -1,0 +1,11 @@
+c:\users\mneuder\documents\visual studio 2012\Projects\initLinq\initLinq\bin\Debug\initLinq.exe.config
+c:\users\mneuder\documents\visual studio 2012\Projects\initLinq\initLinq\bin\Debug\initLinq.exe
+c:\users\mneuder\documents\visual studio 2012\Projects\initLinq\initLinq\bin\Debug\initLinq.pdb
+c:\users\mneuder\documents\visual studio 2012\Projects\initLinq\initLinq\obj\Debug\initLinq.exe
+c:\users\mneuder\documents\visual studio 2012\Projects\initLinq\initLinq\obj\Debug\initLinq.pdb
+c:\users\mneuder\documents\visual studio 2012\Projects\initLinq\initLinq\obj\Debug\initLinq.csprojResolveAssemblyReference.cache
+c:\users\mneuder\documents\visual studio 2012\Projects\initLinq\initLinq\bin\Debug\DaoGites.dll
+c:\users\mneuder\documents\visual studio 2012\Projects\initLinq\initLinq\bin\Debug\EntityFramework.dll
+c:\users\mneuder\documents\visual studio 2012\Projects\initLinq\initLinq\bin\Debug\DaoGites.pdb
+c:\users\mneuder\documents\visual studio 2012\Projects\initLinq\initLinq\bin\Debug\EntityFramework.xml
+c:\users\mneuder\documents\visual studio 2012\Projects\initLinq\initLinq\bin\Debug\fr\EntityFramework.resources.dll

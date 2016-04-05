@@ -1,0 +1,14 @@
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\requetesLinq\bin\Debug\requetesLinq.exe.config
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\requetesLinq\obj\Debug\requetesLinq.csprojResolveAssemblyReference.cache
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\requetesLinq\obj\Debug\requetesLinq.Fm_principal.resources
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\requetesLinq\obj\Debug\requetesLinq.Properties.Resources.resources
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\requetesLinq\obj\Debug\requetesLinq.csproj.GenerateResource.Cache
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\requetesLinq\bin\Debug\requetesLinq.exe
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\requetesLinq\bin\Debug\requetesLinq.pdb
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\requetesLinq\bin\Debug\DaoGites.dll
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\requetesLinq\bin\Debug\EntityFramework.dll
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\requetesLinq\bin\Debug\DaoGites.pdb
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\requetesLinq\bin\Debug\EntityFramework.xml
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\requetesLinq\bin\Debug\fr\EntityFramework.resources.dll
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\requetesLinq\obj\Debug\requetesLinq.exe
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\requetesLinq\obj\Debug\requetesLinq.pdb

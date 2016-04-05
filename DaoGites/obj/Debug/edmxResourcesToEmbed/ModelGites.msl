@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="gitesModelStoreContainer" CdmEntityContainer="gitesEntities">
+    <EntitySetMapping Name="clients">
+      <EntityTypeMapping TypeName="gitesModel.client">
+        <MappingFragment StoreEntitySet="client">
+          <ScalarProperty Name="numClient" ColumnName="numClient" />
+          <ScalarProperty Name="nomClient" ColumnName="nomClient" />
+          <ScalarProperty Name="adresseClient" ColumnName="adresseClient" />
+          <ScalarProperty Name="cpClient" ColumnName="cpClient" />
+          <ScalarProperty Name="villeClient" ColumnName="villeClient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contrats">
+      <EntityTypeMapping TypeName="gitesModel.contrat">
+        <MappingFragment StoreEntitySet="contrat">
+          <ScalarProperty Name="numContrat" ColumnName="numContrat" />
+          <ScalarProperty Name="dateContrat" ColumnName="dateContrat" />
+          <ScalarProperty Name="valide" ColumnName="valide" />
+          <ScalarProperty Name="annule" ColumnName="annule" />
+          <ScalarProperty Name="numClient" ColumnName="numClient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gites">
+      <EntityTypeMapping TypeName="gitesModel.gite">
+        <MappingFragment StoreEntitySet="gite">
+          <ScalarProperty Name="numGite" ColumnName="numGite" />
+          <ScalarProperty Name="nomGite" ColumnName="nomGite" />
+          <ScalarProperty Name="adresseGite" ColumnName="adresseGite" />
+          <ScalarProperty Name="cpGite" ColumnName="cpGite" />
+          <ScalarProperty Name="villeGite" ColumnName="villeGite" />
+          <ScalarProperty Name="nbEpis" ColumnName="nbEpis" />
+          <ScalarProperty Name="descriptionGite" ColumnName="descriptionGite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="periodes">
+      <EntityTypeMapping TypeName="gitesModel.periode">
+        <MappingFragment StoreEntitySet="periode">
+          <ScalarProperty Name="numPeriode" ColumnName="numPeriode" />
+          <ScalarProperty Name="dateDebutPeriode" ColumnName="dateDebutPeriode" />
+          <ScalarProperty Name="dateFinPeriode" ColumnName="dateFinPeriode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="plannings">
+      <EntityTypeMapping TypeName="gitesModel.planning">
+        <MappingFragment StoreEntitySet="planning">
+          <ScalarProperty Name="numSemaine" ColumnName="numSemaine" />
+          <ScalarProperty Name="numGite" ColumnName="numGite" />
+          <ScalarProperty Name="numContrat" ColumnName="numContrat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="semaines">
+      <EntityTypeMapping TypeName="gitesModel.semaine">
+        <MappingFragment StoreEntitySet="semaine">
+          <ScalarProperty Name="numsemaine" ColumnName="numsemaine" />
+          <ScalarProperty Name="dateDebutSemaine" ColumnName="dateDebutSemaine" />
+          <ScalarProperty Name="dateFinSemaine" ColumnName="dateFinSemaine" />
+          <ScalarProperty Name="numPeriode" ColumnName="numPeriode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tarifs">
+      <EntityTypeMapping TypeName="gitesModel.tarif">
+        <MappingFragment StoreEntitySet="tarif">
+          <ScalarProperty Name="numGite" ColumnName="numGite" />
+          <ScalarProperty Name="numPeriode" ColumnName="numPeriode" />
+          <ScalarProperty Name="prixSemaine" ColumnName="prixSemaine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

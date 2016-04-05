@@ -1,0 +1,8 @@
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\DaoGites\bin\Debug\DaoGites.dll.config
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\DaoGites\bin\Debug\DaoGites.dll
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\DaoGites\bin\Debug\DaoGites.pdb
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\DaoGites\bin\Debug\EntityFramework.dll
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\DaoGites\bin\Debug\EntityFramework.xml
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\DaoGites\bin\Debug\fr\EntityFramework.resources.dll
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\DaoGites\obj\Debug\DaoGites.dll
+c:\Users\mneuder\documents\visual studio 2012\Projects\initLinq\DaoGites\obj\Debug\DaoGites.pdb

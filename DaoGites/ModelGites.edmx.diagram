@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cab8e07a547d491085a8544b51c7d692" Name="Diagramme1">
+        <EntityTypeShape EntityType="gitesModel.client" Width="1.5" PointX="7.375" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="gitesModel.contrat" Width="1.5" PointX="4" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="gitesModel.gite" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="gitesModel.periode" Width="1.5" PointX="3.625" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="gitesModel.planning" Width="1.5" PointX="8.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gitesModel.semaine" Width="1.5" PointX="6.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="gitesModel.tarif" Width="1.5" PointX="1.375" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="gitesModel.fk_contrat_numClient" ManuallyRouted="false" />
+        <AssociationConnector Association="gitesModel.fk_planning_numContrat" ManuallyRouted="false" />
+        <AssociationConnector Association="gitesModel.fk_planning_numGite" ManuallyRouted="false" />
+        <AssociationConnector Association="gitesModel.fk_tarif_numGite" ManuallyRouted="false" />
+        <AssociationConnector Association="gitesModel.fk_semaine_numPeriode" ManuallyRouted="false" />
+        <AssociationConnector Association="gitesModel.fk_tarif_numPeriode" ManuallyRouted="false" />
+        <AssociationConnector Association="gitesModel.fk_planning_numSemaine" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

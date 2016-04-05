@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="DaoGites.gitesEntities" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAgECgAAABAAAAAAAAIAEA=</HashCode>
+      <FileName>ModelGites.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DaoGites.client">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAgAAAAAAIACAAAAAgABAAAAAAAAA=</HashCode>
+      <FileName>client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DaoGites.contrat">
+    <Position X="0.5" Y="3.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAIAAAAAAAAAAAAAABAABAAIBAQ=</HashCode>
+      <FileName>contrat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DaoGites.gite">
+    <Position X="4" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAgQEAAEAAAAAAEAAAAAAAAAAIAEA=</HashCode>
+      <FileName>gite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DaoGites.periode">
+    <Position X="7" Y="4" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAIAAIAAAAAAAAAAAAAAABEA=</HashCode>
+      <FileName>periode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DaoGites.planning">
+    <Position X="4.25" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAABAIAAEAAAAACAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>planning.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DaoGites.semaine">
+    <Position X="0.5" Y="6.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAEAAAIAAAAAAAAQAAAAAAAAJAAA=</HashCode>
+      <FileName>semaine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DaoGites.tarif">
+    <Position X="7.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAMAABAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>tarif.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
